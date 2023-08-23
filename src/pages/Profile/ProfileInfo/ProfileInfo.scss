@@ -1,0 +1,62 @@
+@import "../../../variables.scss";
+
+img {
+   width: 100%;
+   height: 140px;
+   object-fit: cover;
+}
+.profile {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   .img-wrapper {
+      position: relative;
+      .user-bg {
+         border-top-left-radius: 12px;
+         border-top-right-radius: 12px;
+         margin-top: 1rem;
+      }
+      .user-img {
+         position: absolute;
+         border: 6px solid $white-color;
+         border-radius: 50%;
+         width: 100px;
+         height: 100px;
+         left: 1rem;
+         bottom: -4.2rem;
+         object-fit: cover;
+      }
+   }
+   .profile-content {
+      margin: 0.8rem 0 0 8rem;
+      &--name {
+         margin-bottom: 0.1rem;
+      }
+      &--followers {
+         display: flex;
+         align-items: center;
+         font-size: 14px;
+         color: $blue-color;
+         .followers-icon {
+            align-self: flex-end;
+            margin-right: 0.2rem;
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+         }
+         &:hover {
+            .followers-link {
+               color: $blue-color;
+            }
+            .followers-link::after {
+               background: $blue-color;
+            }
+            .followers-icon {
+               opacity: 1;
+            }
+         }
+      }
+   }
+}

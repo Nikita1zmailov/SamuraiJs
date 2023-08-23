@@ -1,0 +1,79 @@
+@import "../../variables.scss";
+
+.navigation {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 1rem 2rem;
+   background-color: $grey-color-bg;
+   margin-top: 1rem;
+   border-radius: 14px;
+   &-menu {
+      padding-left: 0;
+      &--item {
+         margin-top: 0.3rem;
+         font-size: 20px;
+         list-style-type: none;
+      }
+      &--link {
+         display: block;
+         position: relative;
+         padding: 0.2em 0;
+         transition: all 0.2s ease;
+         &::after {
+            background-color: $green-color;
+         }
+         &:hover {
+            transform: scaleY(1.04);
+            color: $green-color;
+         }
+      }
+   }
+   .navigation-menu--link.active {
+      &::after {
+         background-color: $green-color;
+      }
+   }
+   // a::after {
+   //    content: "";
+   //    position: absolute;
+   //    bottom: 0;
+   //    left: 0;
+   //    width: 100%;
+   //    height: 0.08rem;
+   //    background-color: $green-color;
+   //    opacity: 0;
+   //    transition: opacity 300ms, transform 300ms;
+   // }
+   // a:hover::after,
+   // a:focus::after {
+   //    opacity: 1;
+   //    transform: translate3d(0, 0.2em, 0);
+   // }
+   // a {
+   //    overflow: hidden;
+   // }
+
+   // a::after {
+   //    opacity: 1;
+   //    transform: translate3d(-101%, 0, 0);
+   // }
+
+   // a:hover::after,
+   // a:focus::after {
+   //    transform: translate3d(0, 0, 0);
+   // }
+   a {
+      display: inline-block;
+   }
+   a::after {
+      content: "";
+      width: 0px;
+      height: 1px;
+      display: block;
+      transition: 300ms;
+   }
+   a:hover::after {
+      width: 100%;
+   }
+}

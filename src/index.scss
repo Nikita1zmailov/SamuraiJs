@@ -1,0 +1,43 @@
+@import "./variables.scss";
+body {
+   //   ! scrolls start
+   overflow-y: scroll;
+   overflow-x: hidden;
+   // width: calc(100% + 20px);
+   //   ! scrolls end
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Lato", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   a {
+      text-decoration: none;
+      color: inherit;
+   }
+}
+
+code {
+   font-family: "Lato", sans-serif;
+}
+
+a {
+   display: inline-block;
+   color: $blue-color;
+}
+a::after {
+   content: "";
+   width: 0px;
+   height: 1px;
+   display: block;
+   transition: 300ms;
+}
+a:hover::after {
+   width: 100%;
+}
+
+.spinner {
+   display: block;
+   margin: 0 auto;
+   height: 50px;
+   width: 50px;
+}

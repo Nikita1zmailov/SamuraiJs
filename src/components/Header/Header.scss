@@ -1,0 +1,46 @@
+@import "../../variables.scss";
+
+.header {
+   position: sticky;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 2rem;
+   background-color: $black-color;
+   span {
+      color: $white-color;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.8px;
+      margin-top: 1px;
+      margin-right: -6px;
+   }
+
+   &--logo {
+      color: $white-color;
+      font-weight: 600;
+      margin-left: 7.8rem;
+      a {
+         text-decoration: none;
+         &:hover {
+            color: $green-color;
+         }
+      }
+   }
+   &--login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin-right: 4rem;
+      .login-form {
+         padding-left: 1rem;
+         text-decoration: none;
+         color: $white-color;
+         transition: color 0.2s ease;
+         &:hover {
+            color: $green-color;
+         }
+      }
+   }
+}
